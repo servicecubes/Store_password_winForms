@@ -79,6 +79,7 @@
             this.Controls.Add(this.btnRetrieve);
             this.Controls.Add(this.lblWebsite);
             this.Controls.Add(this.tBoxWebsite);
+            this.MaximizeBox = false;
             this.Name = "formRetrieve";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Retrieve Your Passwords";

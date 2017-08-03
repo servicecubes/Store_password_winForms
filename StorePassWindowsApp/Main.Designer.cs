@@ -59,6 +59,7 @@
             this.ClientSize = new System.Drawing.Size(411, 118);
             this.Controls.Add(this.btnRetrieve);
             this.Controls.Add(this.btnStore);
+            this.MaximizeBox = false;
             this.Name = "formMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage Your Passwords";

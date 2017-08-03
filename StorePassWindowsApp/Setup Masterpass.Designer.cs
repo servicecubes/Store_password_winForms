@@ -100,6 +100,7 @@
             this.Controls.Add(this.tBoxMasterpassInput2);
             this.Controls.Add(this.tBoxMasterpassInput1);
             this.Controls.Add(this.lblHeader);
+            this.MaximizeBox = false;
             this.Name = "formSetupMasterpass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Setup Masterpass";

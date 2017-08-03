@@ -40,6 +40,9 @@
             this.btnStoreAndExit = new System.Windows.Forms.Button();
             this.btnStoreAndAddMore = new System.Windows.Forms.Button();
             this.linkMainWindow = new System.Windows.Forms.LinkLabel();
+            this.lblEmptyTextWarning = new System.Windows.Forms.Label();
+            this.lblNoCommaAllowedWarning = new System.Windows.Forms.Label();
+            this.lblPasswordSavedSuccessfullyMsg = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -135,11 +138,44 @@
             this.linkMainWindow.Text = "Back to Main Window";
             this.linkMainWindow.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkMainWindow_LinkClicked);
             // 
+            // lblEmptyTextWarning
+            // 
+            this.lblEmptyTextWarning.AutoSize = true;
+            this.lblEmptyTextWarning.ForeColor = System.Drawing.Color.Red;
+            this.lblEmptyTextWarning.Location = new System.Drawing.Point(17, 88);
+            this.lblEmptyTextWarning.Name = "lblEmptyTextWarning";
+            this.lblEmptyTextWarning.Size = new System.Drawing.Size(159, 13);
+            this.lblEmptyTextWarning.TabIndex = 10;
+            this.lblEmptyTextWarning.Text = "*** One or more fields are empty!";
+            // 
+            // lblNoCommaAllowedWarning
+            // 
+            this.lblNoCommaAllowedWarning.AutoSize = true;
+            this.lblNoCommaAllowedWarning.ForeColor = System.Drawing.Color.Red;
+            this.lblNoCommaAllowedWarning.Location = new System.Drawing.Point(17, 88);
+            this.lblNoCommaAllowedWarning.Name = "lblNoCommaAllowedWarning";
+            this.lblNoCommaAllowedWarning.Size = new System.Drawing.Size(266, 13);
+            this.lblNoCommaAllowedWarning.TabIndex = 11;
+            this.lblNoCommaAllowedWarning.Text = "*** You cannot use comma in any of these fields. Sorry!";
+            // 
+            // lblPasswordSavedSuccessfullyMsg
+            // 
+            this.lblPasswordSavedSuccessfullyMsg.AutoSize = true;
+            this.lblPasswordSavedSuccessfullyMsg.ForeColor = System.Drawing.Color.Green;
+            this.lblPasswordSavedSuccessfullyMsg.Location = new System.Drawing.Point(17, 88);
+            this.lblPasswordSavedSuccessfullyMsg.Name = "lblPasswordSavedSuccessfullyMsg";
+            this.lblPasswordSavedSuccessfullyMsg.Size = new System.Drawing.Size(237, 13);
+            this.lblPasswordSavedSuccessfullyMsg.TabIndex = 12;
+            this.lblPasswordSavedSuccessfullyMsg.Text = ":) Your password has been saved successfully! :)";
+            // 
             // formStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(578, 113);
+            this.Controls.Add(this.lblPasswordSavedSuccessfullyMsg);
+            this.Controls.Add(this.lblNoCommaAllowedWarning);
+            this.Controls.Add(this.lblEmptyTextWarning);
             this.Controls.Add(this.linkMainWindow);
             this.Controls.Add(this.btnStoreAndAddMore);
             this.Controls.Add(this.btnStoreAndExit);
@@ -149,9 +185,11 @@
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.tBoxWebsite);
             this.Controls.Add(this.lblWeb);
+            this.MaximizeBox = false;
             this.Name = "formStore";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Store Your Passwords";
+            this.Load += new System.EventHandler(this.formStore_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -171,5 +209,8 @@
         private System.Windows.Forms.Button btnStoreAndExit;
         private System.Windows.Forms.Button btnStoreAndAddMore;
         private System.Windows.Forms.LinkLabel linkMainWindow;
+        private System.Windows.Forms.Label lblEmptyTextWarning;
+        private System.Windows.Forms.Label lblNoCommaAllowedWarning;
+        private System.Windows.Forms.Label lblPasswordSavedSuccessfullyMsg;
     }
 }

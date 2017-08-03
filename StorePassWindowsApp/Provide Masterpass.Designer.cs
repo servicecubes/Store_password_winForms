@@ -74,6 +74,7 @@
             this.Controls.Add(this.btnProceed);
             this.Controls.Add(this.tBoxMasterpass);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "formProvideMasterpass";
             this.Text = "Provide Your Masterpass";
             this.ResumeLayout(false);

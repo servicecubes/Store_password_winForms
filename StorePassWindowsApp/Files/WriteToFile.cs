@@ -13,9 +13,7 @@ namespace StorePassWindowsApp
             string credential = webSite + "," + id + "," + encryptedPass;
 
             File.AppendAllText(@"credentials\Cred.txt", credential.ToString());
-            File.AppendAllText(@"credentials\Cred.txt", "\n");
-
-            Console.WriteLine("\nYour credentials are saved successfully to application database.");
+            File.AppendAllText(@"credentials\Cred.txt", "\n");            
         }
     }
 }
