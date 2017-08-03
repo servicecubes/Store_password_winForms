@@ -32,6 +32,9 @@
             this.lblWebsite = new System.Windows.Forms.Label();
             this.btnRetrieve = new System.Windows.Forms.Button();
             this.linkMainWindow = new System.Windows.Forms.LinkLabel();
+            this.lblSomethingUnexpected = new System.Windows.Forms.Label();
+            this.lblNoCommaIsAllowedWarning = new System.Windows.Forms.Label();
+            this.lblEmptyTextWarning = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tBoxWebsite
@@ -58,6 +61,7 @@
             this.btnRetrieve.TabIndex = 2;
             this.btnRetrieve.Text = "Retrieve Saved Passwords";
             this.btnRetrieve.UseVisualStyleBackColor = true;
+            this.btnRetrieve.Click += new System.EventHandler(this.btnRetrieve_Click);
             // 
             // linkMainWindow
             // 
@@ -70,11 +74,44 @@
             this.linkMainWindow.Text = "Back to Main Window";
             this.linkMainWindow.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkMainWindow_LinkClicked);
             // 
+            // lblSomethingUnexpected
+            // 
+            this.lblSomethingUnexpected.AutoSize = true;
+            this.lblSomethingUnexpected.ForeColor = System.Drawing.Color.Red;
+            this.lblSomethingUnexpected.Location = new System.Drawing.Point(11, 91);
+            this.lblSomethingUnexpected.Name = "lblSomethingUnexpected";
+            this.lblSomethingUnexpected.Size = new System.Drawing.Size(164, 13);
+            this.lblSomethingUnexpected.TabIndex = 12;
+            this.lblSomethingUnexpected.Text = "*** Oops! Something went wrong.";
+            // 
+            // lblNoCommaIsAllowedWarning
+            // 
+            this.lblNoCommaIsAllowedWarning.AutoSize = true;
+            this.lblNoCommaIsAllowedWarning.ForeColor = System.Drawing.Color.Red;
+            this.lblNoCommaIsAllowedWarning.Location = new System.Drawing.Point(11, 91);
+            this.lblNoCommaIsAllowedWarning.Name = "lblNoCommaIsAllowedWarning";
+            this.lblNoCommaIsAllowedWarning.Size = new System.Drawing.Size(145, 13);
+            this.lblNoCommaIsAllowedWarning.TabIndex = 13;
+            this.lblNoCommaIsAllowedWarning.Text = "*** Sorry! No comma allowed!";
+            // 
+            // lblEmptyTextWarning
+            // 
+            this.lblEmptyTextWarning.AutoSize = true;
+            this.lblEmptyTextWarning.ForeColor = System.Drawing.Color.Red;
+            this.lblEmptyTextWarning.Location = new System.Drawing.Point(11, 91);
+            this.lblEmptyTextWarning.Name = "lblEmptyTextWarning";
+            this.lblEmptyTextWarning.Size = new System.Drawing.Size(137, 13);
+            this.lblEmptyTextWarning.TabIndex = 14;
+            this.lblEmptyTextWarning.Text = "*** Please enter some texts!";
+            // 
             // formRetrieve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(305, 117);
+            this.Controls.Add(this.lblEmptyTextWarning);
+            this.Controls.Add(this.lblNoCommaIsAllowedWarning);
+            this.Controls.Add(this.lblSomethingUnexpected);
             this.Controls.Add(this.linkMainWindow);
             this.Controls.Add(this.btnRetrieve);
             this.Controls.Add(this.lblWebsite);
@@ -83,6 +120,7 @@
             this.Name = "formRetrieve";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Retrieve Your Passwords";
+            this.Load += new System.EventHandler(this.formRetrieve_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,5 +132,8 @@
         private System.Windows.Forms.Label lblWebsite;
         private System.Windows.Forms.Button btnRetrieve;
         private System.Windows.Forms.LinkLabel linkMainWindow;
+        private System.Windows.Forms.Label lblSomethingUnexpected;
+        private System.Windows.Forms.Label lblNoCommaIsAllowedWarning;
+        private System.Windows.Forms.Label lblEmptyTextWarning;
     }
 }

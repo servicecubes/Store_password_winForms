@@ -16,5 +16,10 @@ namespace StorePassWindowsApp
         {
             InitializeComponent();
         }
+
+        private void formProvideMasterpass_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

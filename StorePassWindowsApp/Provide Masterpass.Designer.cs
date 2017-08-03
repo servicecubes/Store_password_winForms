@@ -70,13 +70,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 62);
+            this.ClientSize = new System.Drawing.Size(507, 79);
             this.Controls.Add(this.btnProceed);
             this.Controls.Add(this.tBoxMasterpass);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.Name = "formProvideMasterpass";
             this.Text = "Provide Your Masterpass";
+            this.Load += new System.EventHandler(this.formProvideMasterpass_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
