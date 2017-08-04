@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StorePassWindowsApp
@@ -29,11 +22,13 @@ namespace StorePassWindowsApp
             lblPasswordSavedSuccessfullyMsg.Hide();
 
             if (dataValidator())
-            {
-                
+            {                
                 StorePass sp = new StorePass();        
                 sp.storePassowrdToFile(tBoxWebsite.Text, tBoxId.Text, tBoxPassword.Text);
                 lblPasswordSavedSuccessfullyMsg.Show();
+                tBoxWebsite.Clear();
+                tBoxId.Clear();
+                tBoxPassword.Clear();                
             }
         }
 

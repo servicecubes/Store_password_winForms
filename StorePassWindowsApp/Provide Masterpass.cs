@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StorePassWindowsApp
@@ -17,9 +10,39 @@ namespace StorePassWindowsApp
             InitializeComponent();
         }
 
+        private void btnProceed_Click(object sender, EventArgs e)
+        {
+            if (dataValidator())
+            {
+                RetrievePass rp = new RetrievePass();
+                if (tBoxMasterpass.Text == rp.retrieveMasterPass())
+                {
+                    MessageBox.Show("Masterpass is correct. Need to add code block here!");
+                }
+                else
+                {
+                    MessageBox.Show("Spammer detected!");
+                    Application.Exit();
+                }
+            }
+        }
+
+        private bool dataValidator()
+        {
+            if (tBoxMasterpass.Text.Trim() == "")
+            {
+                lblEmptyTextWarning.Show();
+                return false;
+            }
+            else
+            {
+                return true;
+            }            
+        }
+
         private void formProvideMasterpass_Load(object sender, EventArgs e)
         {
-
+            lblEmptyTextWarning.Hide();
         }
     }
 }

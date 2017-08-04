@@ -33,6 +33,7 @@
             this.tBoxMasterpass = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnProceed = new System.Windows.Forms.Button();
+            this.lblEmptyTextWarning = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -65,17 +66,30 @@
             this.btnProceed.TabIndex = 3;
             this.btnProceed.Text = "Proceed";
             this.btnProceed.UseVisualStyleBackColor = true;
+            this.btnProceed.Click += new System.EventHandler(this.btnProceed_Click);
+            // 
+            // lblEmptyTextWarning
+            // 
+            this.lblEmptyTextWarning.AutoSize = true;
+            this.lblEmptyTextWarning.ForeColor = System.Drawing.Color.Red;
+            this.lblEmptyTextWarning.Location = new System.Drawing.Point(13, 54);
+            this.lblEmptyTextWarning.Name = "lblEmptyTextWarning";
+            this.lblEmptyTextWarning.Size = new System.Drawing.Size(188, 13);
+            this.lblEmptyTextWarning.TabIndex = 15;
+            this.lblEmptyTextWarning.Text = "*** Come on! Type your real password!";
             // 
             // formProvideMasterpass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 79);
+            this.ClientSize = new System.Drawing.Size(507, 76);
+            this.Controls.Add(this.lblEmptyTextWarning);
             this.Controls.Add(this.btnProceed);
             this.Controls.Add(this.tBoxMasterpass);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.Name = "formProvideMasterpass";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Provide Your Masterpass";
             this.Load += new System.EventHandler(this.formProvideMasterpass_Load);
             this.ResumeLayout(false);
@@ -89,5 +103,6 @@
         private System.Windows.Forms.TextBox tBoxMasterpass;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button btnProceed;
+        private System.Windows.Forms.Label lblEmptyTextWarning;
     }
 }
