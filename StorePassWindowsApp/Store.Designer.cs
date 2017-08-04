@@ -43,7 +43,6 @@
             this.lblEmptyTextWarning = new System.Windows.Forms.Label();
             this.lblNoCommaAllowedWarning = new System.Windows.Forms.Label();
             this.lblPasswordSavedSuccessfullyMsg = new System.Windows.Forms.Label();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblWeb
@@ -57,16 +56,13 @@
             // 
             // contextMenuStrip1
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.testToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(94, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // testToolStripMenuItem
             // 
             this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
-            this.testToolStripMenuItem.Text = "test";
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
             // tBoxWebsite
             // 
@@ -112,7 +108,7 @@
             this.btnStoreAndExit.Location = new System.Drawing.Point(294, 57);
             this.btnStoreAndExit.Name = "btnStoreAndExit";
             this.btnStoreAndExit.Size = new System.Drawing.Size(272, 23);
-            this.btnStoreAndExit.TabIndex = 7;
+            this.btnStoreAndExit.TabIndex = 8;
             this.btnStoreAndExit.Text = "Store and Exit";
             this.btnStoreAndExit.UseVisualStyleBackColor = true;
             this.btnStoreAndExit.Click += new System.EventHandler(this.btnStoreAndExit_Click);
@@ -122,13 +118,14 @@
             this.btnStoreAndAddMore.Location = new System.Drawing.Point(16, 57);
             this.btnStoreAndAddMore.Name = "btnStoreAndAddMore";
             this.btnStoreAndAddMore.Size = new System.Drawing.Size(272, 23);
-            this.btnStoreAndAddMore.TabIndex = 8;
+            this.btnStoreAndAddMore.TabIndex = 7;
             this.btnStoreAndAddMore.Text = "Store and Add More";
             this.btnStoreAndAddMore.UseVisualStyleBackColor = true;
             this.btnStoreAndAddMore.Click += new System.EventHandler(this.btnStoreAndAddMore_Click);
             // 
             // linkMainWindow
             // 
+            this.linkMainWindow.ActiveLinkColor = System.Drawing.Color.Blue;
             this.linkMainWindow.AutoSize = true;
             this.linkMainWindow.Location = new System.Drawing.Point(454, 88);
             this.linkMainWindow.Name = "linkMainWindow";
@@ -190,7 +187,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Store Your Passwords";
             this.Load += new System.EventHandler(this.formStore_Load);
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

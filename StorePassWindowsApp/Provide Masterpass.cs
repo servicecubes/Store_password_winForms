@@ -36,6 +36,7 @@ namespace StorePassWindowsApp
             }
             else
             {
+                lblEmptyTextWarning.Hide();
                 return true;
             }            
         }

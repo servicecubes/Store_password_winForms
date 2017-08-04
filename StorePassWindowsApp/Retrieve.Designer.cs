@@ -65,6 +65,7 @@
             // 
             // linkMainWindow
             // 
+            this.linkMainWindow.ActiveLinkColor = System.Drawing.Color.Blue;
             this.linkMainWindow.AutoSize = true;
             this.linkMainWindow.Location = new System.Drawing.Point(182, 91);
             this.linkMainWindow.Name = "linkMainWindow";
