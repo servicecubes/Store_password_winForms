@@ -9,6 +9,11 @@ namespace StorePassWindowsApp
 
         public void writePassOnCredentialFile(string webSite, string id, string password, string masterPass)
         {
+            if (!Directory.Exists(@"credentials"))
+            {
+                Directory.CreateDirectory(@"credentials");
+            }
+
             var encryptedPass = tcd1.EncryptText(password, masterPass);
             string credential = webSite + "," + id + "," + encryptedPass;
 
