@@ -4,13 +4,6 @@ using System.Windows.Forms;
 
 namespace StorePassWindowsApp
 {
-    public class CustomControls : Form
-    {
-        private TextBox tBoxId = new TextBox();
-        private TextBox tBoxPassword = new TextBox();
-        private Button btnCopyToClipBoard = new Button();
-    }
-
     public partial class formPasswords : Form
     {
         public formPasswords()
@@ -23,10 +16,7 @@ namespace StorePassWindowsApp
             RetrievePass rp = new RetrievePass();
             var count = 0;
             var masterPass = rp.retrieveMasterPass();
-
-            CustomControls cc = new CustomControls();
-            cc.Controls.Add(new TextBox());
-
+            
             // Reading from the password file and displating them on the form.
             // Code is not written yet.
 
