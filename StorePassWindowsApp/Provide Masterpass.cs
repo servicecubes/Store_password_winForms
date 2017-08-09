@@ -17,10 +17,14 @@ namespace StorePassWindowsApp
                 RetrievePass rp = new RetrievePass();
                 if (tBoxMasterpass.Text == rp.retrieveMasterPass())
                 {
-                    MessageBox.Show("Masterpass is correct. Need to add code block here!");
+                    tBoxMasterpass.Clear();
+                    formPasswords frmPasswords = new formPasswords();
+                    frmPasswords.ShowDialog(this);
+                    Close();                    
                 }
                 else
                 {
+                    tBoxMasterpass.Clear();
                     MessageBox.Show("Spammer detected!");
                     Application.Exit();
                 }

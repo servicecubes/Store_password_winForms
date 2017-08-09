@@ -19,6 +19,7 @@ namespace StorePassWindowsApp
         {
             if (dataValidator())
             {
+                GlobalVariables.websiteName = tBoxWebsite.Text.Trim();
                 formProvideMasterpass FPM = new formProvideMasterpass();
                 FPM.ShowDialog(this);
             }            

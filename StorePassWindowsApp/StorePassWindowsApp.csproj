@@ -57,6 +57,12 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Passwords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Passwords.Designer.cs">
+      <DependentUpon>Passwords.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provide Masterpass.cs">
@@ -85,6 +91,9 @@
     </Compile>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Passwords.resx">
+      <DependentUpon>Passwords.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

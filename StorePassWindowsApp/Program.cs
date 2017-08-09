@@ -3,6 +3,12 @@ using System.Windows.Forms;
 
 namespace StorePassWindowsApp
 {
+    public static class GlobalVariables
+    {
+        public static bool ifAnyPasswordWasFoundForThisWebsite;
+        public static string websiteName;
+    }
+
     static class Program
     {
         /// <summary>

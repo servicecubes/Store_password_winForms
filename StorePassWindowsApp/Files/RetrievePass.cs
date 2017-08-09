@@ -42,39 +42,5 @@ namespace StorePassWindowsApp
             var value = tcd.DecryptText(line, applicationEncryptionPass);
             return value;
         }
-
-        //public void retrievePass(string webSiteName)
-        //{
-        //    Console.WriteLine("\n");
-        //    var count = 0;
-        //    var masterPass = retrieveMasterPass();
-
-        //    using (StreamReader sr = new StreamReader(@"credentials\Cred.txt"))
-        //    {
-        //        while (sr.Peek() >= 0)
-        //        {
-        //            var line = sr.ReadLine();
-        //            if (webSiteName.ToLower() == line.Split(',')[0].ToLower())
-        //            {
-        //                count++;
-        //                var text = line.Split(',')[2];
-
-        //                Console.WriteLine("Id:\t" + line.Split(',')[1] + "\t\t\tPass:\t" + tcd.DecryptText(text, masterPass));
-        //            }
-        //        }
-        //    }
-
-        //    if (count == 1)
-        //    {
-        //        Console.WriteLine("\n" + count + " matched item found.\n\nEnd of search.");
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("\n" + count + " matched items found.\n\nEnd of search.");
-        //    }
-        //}
-
-
-
     }
 }
