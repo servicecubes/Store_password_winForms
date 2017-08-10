@@ -28,28 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblCountDisplayText = new System.Windows.Forms.Label();
+            this.lblPass = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // lblCountDisplayText
+            // lblPass
             // 
-            this.lblCountDisplayText.AutoSize = true;
-            this.lblCountDisplayText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCountDisplayText.Location = new System.Drawing.Point(13, 13);
-            this.lblCountDisplayText.Name = "lblCountDisplayText";
-            this.lblCountDisplayText.Size = new System.Drawing.Size(0, 25);
-            this.lblCountDisplayText.TabIndex = 0;
+            this.lblPass.AutoSize = true;
+            this.lblPass.Location = new System.Drawing.Point(230, 10);
+            this.lblPass.Name = "lblPass";
+            this.lblPass.Size = new System.Drawing.Size(56, 13);
+            this.lblPass.TabIndex = 2;
+            this.lblPass.Text = "Password:";
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(12, 10);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(19, 13);
+            this.lblId.TabIndex = 1;
+            this.lblId.Text = "Id:";
             // 
             // formPasswords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 180);
-            this.Controls.Add(this.lblCountDisplayText);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(439, 98);
+            this.Controls.Add(this.lblPass);
+            this.Controls.Add(this.lblId);
             this.MaximizeBox = false;
             this.Name = "formPasswords";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Passwords";
+            this.Text = "Website = ";
             this.Load += new System.EventHandler(this.formPasswords_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -58,6 +70,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblCountDisplayText;
+        private System.Windows.Forms.Label lblPass;
+        private System.Windows.Forms.Label lblId;
     }
 }

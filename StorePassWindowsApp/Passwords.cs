@@ -13,52 +13,73 @@ namespace StorePassWindowsApp
 
         private void formPasswords_Load(object sender, EventArgs e)
         {
-            RetrievePass rp = new RetrievePass();
-            var count = 0;
-            var masterPass = rp.retrieveMasterPass();
+            // Getting the UI ready for displaying passwords.
+            MinimumSize = new System.Drawing.Size(Width, Height);
+            MaximumSize = new System.Drawing.Size(3000, 2000);
+            AutoScroll = true;
+            AutoSize = true;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             
-            // Reading from the password file and displating them on the form.
-            // Code is not written yet.
-
-            //using (StreamReader sr = new StreamReader(@"credentials\Cred.txt"))
-            //{
-            //    while (sr.Peek() >= 0)
-            //    {
-            //        var line = sr.ReadLine();
-            //        // Get the website name from the last form.
-            //        if (GlobalVariables.websiteName.ToLower() == line.Split(',')[0].ToLower())
-            //        {
-            //            count++;
-            //            var text = line.Split(',')[2];
-
-            //            Console.WriteLine("Id:\t" + line.Split(',')[1] + "\t\t\tPass:\t" + tcd.DecryptText(text, masterPass));
-            //        }
-            //    }
-
-            if (count == 0)
-            {
-                MessageBox.Show("Sorry, nothing was found for website: [" + GlobalVariables.websiteName + "].");
-                Close();
-            }
-            else if (count == 1)
-            {
-                lblCountDisplayText.Text = count + " result found.";
-                lblCountDisplayText.Show();
-            }
-            else
-            {
-                lblCountDisplayText.Text = count + " results found.";
-                lblCountDisplayText.Show();
-            }
-
-
+            // Displaying passowrds now.
+            displayPasswords();
         }
 
+        private void displayPasswords()
+        {
+            int txtBoxStartPositionId = 12;
+            int txtBoxStartPositionVId = 30;
+            int txtBoxStartPositionPass = 230;
+            int txtBoxStartPositionVPass = 30;
+
+            RetrievePass rp = new RetrievePass();
+            TextEncryptionDecryption tcd = new TextEncryptionDecryption();
+            var count = 0;
+            var masterPass = rp.retrieveMasterPass();
 
 
+            using (StreamReader sr = new StreamReader(@"credentials\Cred.txt"))
+            {
+                while (sr.Peek() >= 0)
+                {                    
+                    var line = sr.ReadLine();
 
+                    if (GlobalVariables.websiteName.ToLower() == line.Split(',')[0].ToLower())
+                    {
+                        var id = line.Split(',')[1];
+                        var encryptedPass = line.Split(',')[2];
+                        var passInPlainText = tcd.DecryptText(encryptedPass, masterPass);
 
+                        count++;
+
+                        // Displaying Id fields.
+                        TextBox tBoxId = new TextBox();
+                        tBoxId.Location = new System.Drawing.Point(txtBoxStartPositionId, txtBoxStartPositionVId);
+                        tBoxId.Size = new System.Drawing.Size(200, 30);
+                        tBoxId.Text = id.ToString();
+
+                        Controls.Add(tBoxId);
+                        txtBoxStartPositionVId += 30;
+
+                        // Displaying Password fields.
+                        TextBox tBoxPass = new TextBox();
+                        tBoxPass.Location = new System.Drawing.Point(txtBoxStartPositionPass, txtBoxStartPositionVPass);
+                        tBoxPass.Size = new System.Drawing.Size(200, 30);
+                        tBoxPass.Text = id.ToString();
+
+                        Controls.Add(tBoxPass);
+                        txtBoxStartPositionVPass += 30;
+
+                        var text = line.Split(',')[2];                        
+                    }
+                }
+            }
+
+            GlobalVariables.passwordCount = count;
+            Text = "Website = " + GlobalVariables.websiteName + " :: Passwords Found = " + GlobalVariables.passwordCount;         
+        }
+        
+        
+             
 
     }
-
 }

@@ -7,6 +7,7 @@ namespace StorePassWindowsApp
     {
         public static bool ifAnyPasswordWasFoundForThisWebsite;
         public static string websiteName;
+        public static int passwordCount;
     }
 
     static class Program
