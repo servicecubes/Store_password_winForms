@@ -64,7 +64,7 @@ namespace StorePassWindowsApp
                         TextBox tBoxPass = new TextBox();
                         tBoxPass.Location = new System.Drawing.Point(txtBoxStartPositionPass, txtBoxStartPositionVPass);
                         tBoxPass.Size = new System.Drawing.Size(200, 30);
-                        tBoxPass.Text = id.ToString();
+                        tBoxPass.Text = passInPlainText.ToString();
 
                         Controls.Add(tBoxPass);
                         txtBoxStartPositionVPass += 30;
@@ -77,9 +77,5 @@ namespace StorePassWindowsApp
             GlobalVariables.passwordCount = count;
             Text = "Website = " + GlobalVariables.websiteName + " :: Passwords Found = " + GlobalVariables.passwordCount;         
         }
-        
-        
-             
-
     }
 }
